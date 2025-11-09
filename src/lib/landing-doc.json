@@ -1,0 +1,817 @@
+{
+  "projectInfo": {
+    "name": "TibbNET Landing Page",
+    "description": "Digital medical portal platform for Azerbaijan",
+    "framework": "Next.js",
+    "componentLibrary": "shadcn/ui",
+    "language": "Azerbaijani (with EN/RU support)"
+  },
+  "branding": {
+    "colors": {
+      "primary": "#4D8875",
+      "primaryHover": "#3d6d5f",
+      "secondary": "#FF9800",
+      "secondaryHover": "#e68900",
+      "background": "#FFFFFF",
+      "backgroundGradient": "from-white to-gray-50",
+      "text": {
+        "primary": "#1F2937",
+        "secondary": "#6B7280",
+        "light": "#9CA3AF"
+      },
+      "buttonText": "#FFFFFF"
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "headings": {
+        "h1": "text-4xl md:text-5xl lg:text-6xl font-bold",
+        "h2": "text-3xl md:text-4xl lg:text-5xl font-bold",
+        "h3": "text-2xl md:text-3xl font-semibold",
+        "h4": "text-xl md:text-2xl font-semibold"
+      },
+      "body": {
+        "large": "text-lg md:text-xl",
+        "regular": "text-base",
+        "small": "text-sm"
+      }
+    }
+  },
+  "navbar": {
+    "type": "fixed",
+    "className": "fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50",
+    "containerClassName": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "height": "h-16",
+    "elements": {
+      "logo": {
+        "text": "TİBBNET",
+        "className": "text-2xl font-bold text-[#4D8875]"
+      },
+      "phone": {
+        "number": "+994 10 225 03 03",
+        "display": "hidden md:flex items-center space-x-1",
+        "icon": "Phone",
+        "iconClassName": "w-4 h-4 text-[#4D8875]"
+      },
+      "navigation": {
+        "display": "hidden md:flex items-center space-x-6",
+        "links": [
+          {
+            "text": "İmkanlar",
+            "href": "#imkanlar",
+            "className": "text-gray-700 hover:text-[#4D8875] transition-colors"
+          },
+          {
+            "text": "Necə işləyir?",
+            "href": "#nece-isleyir",
+            "className": "text-gray-700 hover:text-[#4D8875] transition-colors"
+          },
+          {
+            "text": "Haqqımızda",
+            "href": "#haqqimizda",
+            "className": "text-gray-700 hover:text-[#4D8875] transition-colors"
+          }
+        ]
+      },
+      "languageSelector": {
+        "languages": ["AZ", "EN", "RU"],
+        "default": "AZ",
+        "className": "flex items-center space-x-2 border-l pl-6",
+        "buttonActive": "px-2 py-1 text-sm rounded bg-[#4D8875] text-white",
+        "buttonInactive": "px-2 py-1 text-sm rounded text-gray-600 hover:bg-gray-100"
+      },
+      "authButton": {
+        "text": "Daxil ol",
+        "className": "px-4 py-2 bg-[#4D8875] text-white rounded-lg hover:bg-[#3d6d5f] transition-all hover:shadow-lg"
+      },
+      "mobileMenu": {
+        "icon": "Menu",
+        "closeIcon": "X",
+        "className": "md:hidden"
+      }
+    }
+  },
+  "hero": {
+    "containerClassName": "pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4D8875]/5 to-white",
+    "layout": "grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto",
+    "content": {
+      "mainHeading": {
+        "text": "Peşəkar Həkimlərin Məkanı!",
+        "className": "text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+      },
+      "ctaButton": {
+        "text": "Bizə qoşulun",
+        "className": "inline-flex items-center px-8 py-4 bg-[#4D8875] text-white rounded-xl hover:bg-[#3d6d5f] transition-all hover:shadow-xl text-lg font-semibold"
+      },
+      "badges": [
+        {
+          "text": "İnteraktiv virtual klinika",
+          "icon": "Monitor",
+          "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md text-sm"
+        },
+        {
+          "text": "Rəqəmsal klinik məlumatlar",
+          "icon": "FileText",
+          "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md text-sm"
+        },
+        {
+          "text": "Əyani və Onlayn xidmətlər",
+          "icon": "Video",
+          "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md text-sm"
+        },
+        {
+          "text": "Təhlükəsizlik və anonimlik",
+          "icon": "Shield",
+          "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md text-sm"
+        }
+      ],
+      "badgesLayout": "flex flex-wrap gap-3 mt-8"
+    },
+    "visual": {
+      "type": "illustration",
+      "placeholder": "Hero illustration/mockup area",
+      "className": "relative h-96 md:h-full"
+    }
+  },
+  "section1": {
+    "id": "hekim-features",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-white",
+    "maxWidth": "max-w-7xl mx-auto",
+    "content": {
+      "mainHeading": {
+        "text": "Həkimsiniz?",
+        "className": "text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4"
+      },
+      "subtext": {
+        "text": "Tibbi Xidmətlərin asan, təhlükəsiz və sərfəli virtual məkanı olan TİBBNET Sizin də ünvanınız olsun!",
+        "className": "text-lg md:text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto"
+      },
+      "features": [
+        {
+          "title": "Ətraflı Profil Qeydiyyatı",
+          "icon": "UserCircle",
+          "description": "Həkim profili yaratmaq və idarə etmək"
+        },
+        {
+          "title": "Dinamik iş Qrafiki",
+          "icon": "Calendar",
+          "description": "İş saatlarını asanlıqla tənzimləyin"
+        },
+        {
+          "title": "Sıra və Vaxt ilə Görüşlər",
+          "icon": "Clock",
+          "description": "Görüş sistemini idarə edin"
+        },
+        {
+          "title": "Əyani, Onlayn Qəbullar",
+          "icon": "Video",
+          "description": "Hər iki format üçün qəbul aparın"
+        },
+        {
+          "title": "Aksiyalar, Kuponlar",
+          "icon": "Tag",
+          "description": "Xüsusi təkliflər yaradın"
+        },
+        {
+          "title": "Ani Bildirişlər",
+          "icon": "Bell",
+          "description": "Email, SMS, Mobil bildirişlər"
+        },
+        {
+          "title": "Şəxsi portal, Hesabatlar",
+          "icon": "BarChart",
+          "description": "Detallı statistika və hesabatlar"
+        }
+      ],
+      "featureCardClassName": "p-6 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:border-[#4D8875]/30",
+      "featuresGrid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12",
+      "ctaButton": {
+        "text": "Müraciət et",
+        "className": "inline-flex items-center px-8 py-4 bg-[#4D8875] text-white rounded-xl hover:bg-[#3d6d5f] transition-all hover:shadow-xl text-lg font-semibold mx-auto block w-fit"
+      }
+    }
+  },
+  "section2": {
+    "id": "app-availability",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4D8875]/10 to-white",
+    "maxWidth": "max-w-5xl mx-auto text-center",
+    "content": {
+      "mainText": {
+        "text": "Tibbi Xidmətlərin asan və sərfəli məkanı olan TİBBNET, Sizin də ünvanınız olsun!",
+        "className": "text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-12"
+      },
+      "appStores": [
+        {
+          "name": "App Store",
+          "icon": "Apple",
+          "text": "Download on the",
+          "subtext": "App Store",
+          "className": "inline-flex items-center space-x-3 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-all"
+        },
+        {
+          "name": "Google Play",
+          "icon": "Play",
+          "text": "GET IT ON",
+          "subtext": "Google Play",
+          "className": "inline-flex items-center space-x-3 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-all"
+        }
+      ],
+      "storesLayout": "flex flex-col sm:flex-row items-center justify-center gap-4"
+    }
+  },
+  "section3": {
+    "id": "pasient-journey",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-white",
+    "maxWidth": "max-w-7xl mx-auto",
+    "content": {
+      "mainHeading": {
+        "text": "Pasiyentsiniz?",
+        "className": "text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4"
+      },
+      "subtext": {
+        "text": "TİBBNET Sizə və yaxınlarınıza tibbi xidmətlərdən gözlədiyiniz keyfiyyət və rahatlığı verir!",
+        "className": "text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
+      },
+      "stepAnimation": {
+        "interval": 3000,
+        "transitionDuration": "500ms"
+      },
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "HƏKİM SEÇ",
+          "description": "Pasientlər, elastik axtarış imkanı ilə Həkimi rahatlıqla axtarır, detallı profil məlumatları ilə tanış olur, özünə seçilmiş Həkimlər kataloqu formalaşdıra bilir. Həkimlərin xüsusi təklifləri, endirim kuponları kimi Platformanın geniş marketing imkanlarından yararlana bilir.",
+          "features": [
+            "Elastik axtarış mexanizmi",
+            "Həkimin ətraflı profil məlumatı",
+            "Həkimlərlə daxili yazışma",
+            "Aksiyalar, endirim kuponları"
+          ],
+          "icon": "Search"
+        },
+        {
+          "stepNumber": 2,
+          "title": "GÖRÜŞ AL",
+          "description": "Pasientlər, Həkimlərin xidmət parametrlərini ətraflı analiz edib, sıra vəya vaxt metodu ilə Həkimlərdən özləri və himayələrində olan yaxınları üçün görüş ala bilir. Şəxsi Portallarından görüş məlumatlarını izləyib, zərurət olduqda redaktə edə bilir.",
+          "features": [
+            "Sıra ilə randevu mexanizmi",
+            "Vaxt ilə randevu mexanizmi",
+            "Ani bildirişlər (e-mail, sms, mobil)",
+            "Şəxsi portaldan izləmə"
+          ],
+          "icon": "Calendar"
+        },
+        {
+          "stepNumber": 3,
+          "title": "QƏBULA QATIL",
+          "description": "Pasientlər, əyani və onlayn qəbul prosesinin status vəziyyətini, qəbula bağlı ödəmə məlumatlarını, Qəbul prosesində formalaşan anamnez, şikayət, müayinə və müalicə, resept məlumatlarını portallarından izləyir, xidmətlərə rəy verib dəstək xətti xidmətlərindən yararlana bilir",
+          "features": [
+            "Əyani qəbul mexanizmi",
+            "Onlayn qəbul mexanizmi",
+            "Rəqəmsal klinik məlumatlar",
+            "Rəylər, dəstək xətti"
+          ],
+          "icon": "Stethoscope"
+        },
+        {
+          "stepNumber": 4,
+          "title": "SAĞLAM QAL",
+          "description": "Sağlamlığınıza prioritet verin və TİBBNET platforması ilə peşəkar həkimlərlə əlaqə saxlayın.",
+          "features": [],
+          "icon": "Heart"
+        }
+      ],
+      "breadcrumbClassName": "flex items-center justify-center space-x-4 mb-12",
+      "stepCardClassName": "bg-gradient-to-br from-[#4D8875]/5 to-white rounded-2xl p-8 shadow-xl",
+      "ctaButtons": [
+        {
+          "text": "Qeydiyyatdan keç/Daxil ol",
+          "className": "px-8 py-4 bg-[#4D8875] text-white rounded-xl hover:bg-[#3d6d5f] transition-all hover:shadow-xl text-lg font-semibold"
+        },
+        {
+          "text": "Google",
+          "icon": "Chrome",
+          "className": "px-8 py-4 bg-white text-gray-700 border-2 border-gray-300 rounded-xl hover:border-[#4D8875] transition-all text-lg font-semibold"
+        }
+      ],
+      "ctaLayout": "flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+    }
+  },
+  "section4": {
+    "id": "cta-banner",
+    "containerClassName": "py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#4D8875] to-[#3d6d5f]",
+    "maxWidth": "max-w-5xl mx-auto text-center",
+    "content": {
+      "text": {
+        "text": "Evinizdən sıra vəya vaxt ilə görüş alın, sağlamlığınıza prioritet verin!",
+        "className": "text-2xl md:text-3xl lg:text-4xl font-bold text-white"
+      }
+    }
+  },
+  "section5": {
+    "id": "platform-benefits",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-white",
+    "maxWidth": "max-w-7xl mx-auto text-center",
+    "content": {
+      "mainHeading": {
+        "text": "TİBBNET Platformasında",
+        "className": "text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-16"
+      },
+      "benefits": [
+        {
+          "title": "Məkan məhdudiyyəti olmayan",
+          "icon": "Globe",
+          "description": "Harada olursanız olun, xidmətlərdən yararlana bilərsiniz"
+        },
+        {
+          "title": "Virtual hiss etdirməyən",
+          "icon": "Monitor",
+          "description": "Real klinik təcrübəsi kimi keyfiyyətli xidmət"
+        },
+        {
+          "title": "İnteraktiv klinik qeydiyyat imkanı ilə",
+          "icon": "FileCheck",
+          "description": "Rəqəmsal klinik məlumatların idarə edilməsi"
+        }
+      ],
+      "benefitsGrid": "grid grid-cols-1 md:grid-cols-3 gap-8",
+      "benefitCardClassName": "p-8 bg-gradient-to-br from-[#4D8875]/5 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all"
+    }
+  },
+  "section6": {
+    "id": "features-detailed",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white",
+    "maxWidth": "max-w-7xl mx-auto",
+    "layout": "grid md:grid-cols-2 gap-12 items-center",
+    "content": {
+      "left": {
+        "mainHeading": {
+          "text": "TibbNET İmkanları",
+          "className": "text-3xl md:text-4xl font-bold text-gray-900 mb-8"
+        },
+        "toggle": {
+          "options": ["Pasient", "Həkim"],
+          "className": "inline-flex items-center bg-gray-100 rounded-lg p-1 mb-8",
+          "activeClassName": "px-6 py-2 bg-[#4D8875] text-white rounded-lg transition-all",
+          "inactiveClassName": "px-6 py-2 text-gray-600 hover:text-gray-900 transition-all"
+        },
+        "pasientFeatures": [
+          {
+            "title": "ŞƏXSİ PORTAL",
+            "description": "Pasientlər, elastik axtarış imkanı ilə lazım olan xidməti verən Həkimi rahatlıqla axtarır, detallı profil məlumatları ilə tanış olur, seçilmiş Həkimlər kataloqu formalaşdırıb özünə və himayəsində olan şəxslərə tibbi xidmətlər ala bilir.",
+            "icon": "User"
+          },
+          {
+            "title": "GÖRÜŞLƏR",
+            "description": "Pasientlər, Həkimlərin xidmət parametrlərini ətraflı analiz edib, sıra vəya vaxt metodu ilə Həkimlərdən özləri və himayələrində olan yaxınları üçün görüş ala bilir. Şəxsi Portallarından görüş məlumatlarını izləyib, zərurət olduqda vaxtı yeniləyə vəya ləğv edə bilir.",
+            "icon": "Calendar"
+          },
+          {
+            "title": "QƏBULLAR",
+            "description": "Həkimlər, əyani və onlayn qəbul prosesini iş axışlarına uyğun olaraq başladır, redaktə edib vaxtı yeniləyir, gözləməyə alır, ləğv edə bilir, status vəziyyətini, qəbula bağlı rəqəmsal klinik məlumatları idarə edəbilir.",
+            "icon": "Clipboard"
+          },
+          {
+            "title": "ANİ BİLDİRİŞLƏR",
+            "description": "Pasientlər Görüş təyini, idarə edilməsi, bununla yanaşı Qəbul, Ödəmə, Dəstək xətti kimi proseslərin icrası və nəticəsi ilə əlaqədar email, sms və mobil tətbiqdən ani bildirişlər vasitəsilə operativ və effektiv məlumatlandırılır.",
+            "icon": "Bell"
+          }
+        ],
+        "hekimFeatures": [
+          {
+            "title": "ŞƏXSİ PORTAL",
+            "description": "Həkimlər, özləri haqda ətraf profil məlumatı formalaşdırıb, iş yeri ünvanı, verdikləri tibbi xidmətlərin, aksiya və endirim kuponlarının qeydiyyatını aparır və dinamik iş qrafiki tənzimləyib idarə edəbilir.",
+            "icon": "UserCircle"
+          },
+          {
+            "title": "GÖRÜŞLƏR",
+            "description": "Həkimlər, ödəmə metodu təyin edərək sıraya yazılma vəya dəqiq vaxt seçimi ilə WEB-dən və Pasienti ön qeydiyyatdan keçirərək Portaldan görüş təyini imkanı təmin edə bilir",
+            "icon": "CalendarCheck"
+          },
+          {
+            "title": "QƏBULLAR",
+            "description": "Həkimlər, əyani və onlayn qəbul prosesini iş axışlarına uyğun olaraq başladır, redaktə edib vaxtı yeniləyir, gözləməyə alır, ləğv edə bilir, status vəziyyətini, qəbula bağlı rəqəmsal klinik məlumatları idarə edəbilir.",
+            "icon": "Stethoscope"
+          },
+          {
+            "title": "ANİ BİLDİRİŞLƏR",
+            "description": "Həkimlər, Qrafik və Görüş təyini, Qəbul, Ödəmə kimi proseslərin icrası və nəticəsi ilə əlaqədar email, sms və mobil tətbiqdən ani bildirişlər vasitəsilə operativ və effektiv məlumatlandırılır.",
+            "icon": "Bell"
+          }
+        ],
+        "featureCardClassName": "bg-white rounded-xl p-6 shadow-lg mb-6",
+        "navigation": {
+          "prevButton": {
+            "icon": "ChevronLeft",
+            "className": "p-2 rounded-full bg-gray-100 hover:bg-[#4D8875] hover:text-white transition-all"
+          },
+          "nextButton": {
+            "icon": "ChevronRight",
+            "className": "p-2 rounded-full bg-gray-100 hover:bg-[#4D8875] hover:text-white transition-all"
+          },
+          "layout": "flex items-center justify-between mt-6"
+        },
+        "ctaButton": {
+          "text": "Ətraflı",
+          "className": "inline-flex items-center px-6 py-3 bg-[#4D8875] text-white rounded-lg hover:bg-[#3d6d5f] transition-all mt-4"
+        }
+      },
+      "right": {
+        "type": "mockup-area",
+        "className": "relative h-96 md:h-full bg-gradient-to-br from-[#4D8875]/10 to-transparent rounded-2xl flex items-center justify-center",
+        "placeholder": "App mockup screenshots will be displayed here (8 total mockups)"
+      }
+    }
+  },
+  "section7": {
+    "id": "partners",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-white",
+    "maxWidth": "max-w-7xl mx-auto",
+    "content": {
+      "mainHeading": {
+        "text": "TibbNET Tərəfdaşları",
+        "className": "text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+      },
+      "carousel": {
+        "type": "auto-scroll",
+        "speed": "slow",
+        "className": "overflow-hidden",
+        "innerClassName": "flex items-center space-x-12 animate-scroll",
+        "logoClassName": "h-16 w-auto grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100",
+        "placeholder": "Partner company logos will be placed here"
+      }
+    }
+  },
+  "section8": {
+    "id": "contact-cta",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4D8875]/10 to-white",
+    "maxWidth": "max-w-5xl mx-auto text-center",
+    "content": {
+      "mainText": {
+        "text": "Sürətli, effektiv və keyfiyyətli tibbi xidmət lazımdırsa",
+        "className": "text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+      },
+      "subtext": {
+        "text": "Bizimlə əlaqə saxlayın, Sizə uyğun Həkim tapmaqda köməklik edək",
+        "className": "text-lg md:text-xl text-gray-600 mb-8"
+      },
+      "ctaButtons": [
+        {
+          "type": "phone",
+          "text": "+994 10 225 03 03",
+          "icon": "Phone",
+          "href": "tel:+994102250303",
+          "className": "inline-flex items-center space-x-2 px-6 py-3 bg-[#4D8875] text-white rounded-xl hover:bg-[#3d6d5f] transition-all hover:shadow-xl"
+        },
+        {
+          "type": "message",
+          "icon": "MessageCircle",
+          "ariaLabel": "Send message",
+          "className": "p-3 bg-white border-2 border-[#4D8875] text-[#4D8875] rounded-xl hover:bg-[#4D8875] hover:text-white transition-all"
+        },
+        {
+          "type": "email",
+          "icon": "Mail",
+          "href": "mailto:info@tibbnet.az",
+          "ariaLabel": "Send email",
+          "className": "p-3 bg-white border-2 border-[#4D8875] text-[#4D8875] rounded-xl hover:bg-[#4D8875] hover:text-white transition-all"
+        }
+      ],
+      "buttonsLayout": "flex items-center justify-center gap-4"
+    }
+  },
+  "section9": {
+    "id": "faq",
+    "containerClassName": "py-20 px-4 sm:px-6 lg:px-8 bg-white",
+    "maxWidth": "max-w-4xl mx-auto",
+    "content": {
+      "mainHeading": {
+        "text": "TEZ-TEZ Verilən suallar?",
+        "className": "text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4"
+      },
+      "subtext": {
+        "text": "Fərqli tibbi xidmətlərdə ixtisaslaşmış təcrübəli TİBBNET həkim kollektivi",
+        "className": "text-lg text-center text-gray-600 mb-12"
+      },
+      "faqs": [
+        {
+          "question": "Qeydiyyatdan necə keçilir?",
+          "answer": "Mobil tətbiq vəya WEB sayt üzərindən qeydiyyatdan keçmək üçün həkim vəya pasient tərəfindən əsas səhifədə yerləşən \"Qeydiyyat\" düyməsinə basılaraq qeydiyyat ekranına keçid edilir. Məcburi xanalar doldurulur, daxil edilmiş məlumatlar doğru və tamdırsa təsdiq edilərək qeydiyyatdan keçilir. Pasient birbaşa pasient portalına daxil olur, həkim isə qeydiyyat formunu doldurub təsdiq olunması üçün TİBBNET portalına göndərir və təsdiqləndikdən sonra həkim portalına daxil olur."
+        },
+        {
+          "question": "Əyani vəya Onlayn görüş necə alınır?",
+          "answer": "Mobil tətbiq vəya WEB sayt üzərindən görüş alınması üçün lazım olan ixtisasa uyğun olaraq həkim axtarış edilib tapılır. Həkimin profilinə keçid edilib, həkimin iş qrafikinə və görüş metoduna uyğun olaraq istənilən tarix seçilir, sıra vəya dəqiq vaxt metodu ilə pasient özünə vəya himayəsində olan şəxslərə görüş ala bilir."
+        },
+        {
+          "question": "Onlayn görüş necə başladılır?",
+          "answer": "Həkim portaldan vəya pasient portaldan görüşlər menyusunda onlayn görüş sətrində aktiv olan \"Onlayn\" düyməsinə basılaraq görüş başladıla bilər."
+        },
+        {
+          "question": "Aksiyalara necə baxılır?",
+          "answer": "Mobil tətbiq vəya WEB sayt üzərindən aksiyalara baxmaq üçün əsas səhifənin yuxarı hissəsində yerləşən \"Aksiyalar\" menyusuna keçid edilib cari aksiyalara baxıla bilər."
+        },
+        {
+          "question": "Həkimlər TİBBNET tərəfindən yoxlanılır mı?",
+          "answer": "Bəli, bizimlə əməkdaşlıq edən bütün Həkimlərin məlumatları TİBBNET tərəfindən yoxlanılır və təsdiqləndikdən sonra həkimlər Mobil tətbiq və WEB sayt üzərindən xidmət verə bilir."
+        },
+        {
+          "question": "Tibbi xidmətləriniz hansılardır?",
+          "answer": "TİBBNET - in göstərdiyi xidmətlərə Mobil tətbiq və WEB sayt üzərindən baxıla bilər vəya detallı məlumat almaq üçün dəstək xətti ilə əlaqə saxlanıla bilər."
+        },
+        {
+          "question": "Ödəniş metodlarınız hansılardır?",
+          "answer": "Ödəniş metodu nəğd və bank kartı ilə mümkündür. Görüş onlayındırsa bank kartı vasitəsi ilə, əyanidirsə nəğd və bank kartı vasitəsi ilə ödəniş edilə bilər."
+        }
+      ],
+      "accordionItemClassName": "border-b border-gray-200 py-4",
+      "questionClassName": "flex items-center justify-between w-full text-left font-semibold text-gray-900 hover:text-[#4D8875] transition-colors",
+      "answerClassName": "mt-4 text-gray-600 leading-relaxed",
+      "iconOpen": "ChevronUp",
+      "iconClosed": "ChevronDown"
+    }
+  },
+  "footer": {
+    "containerClassName": "bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8",
+    "maxWidth": "max-w-7xl mx-auto",
+    "layout": "grid grid-cols-1 md:grid-cols-4 gap-8",
+    "content": {
+      "branding": {
+        "logo": {
+          "text": "TİBBNET",
+          "className": "text-2xl font-bold text-white mb-4"
+        },
+        "description": {
+          "text": "Peşəkar Həkimlərin Məkanı",
+          "className": "text-gray-400"
+        }
+      },
+      "links": {
+        "title": "Keçidlər",
+        "items": [
+          {
+            "text": "Haqqımızda",
+            "href": "#haqqimizda",
+            "className": "text-gray-400 hover:text-white transition-colors"
+          },
+          {
+            "text": "Necə işləyir?",
+            "href": "#nece-isleyir",
+            "className": "text-gray-400 hover:text-white transition-colors"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Əlaqə",
+        "items": [
+          {
+            "type": "email",
+            "text": "info@tibbnet.az",
+            "href": "mailto:info@tibbnet.az",
+            "icon": "Mail",
+            "className": "flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+          },
+          {
+            "type": "phone",
+            "text": "+994 10 225 03 03",
+            "href": "tel:+994102250303",
+            "icon": "Phone",
+            "className": "flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+          }
+        ]
+      },
+      "appDownload": {
+        "title": "Yüklə",
+        "apps": [
+          {
+            "name": "App Store",
+            "icon": "Apple",
+            "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-200 transition-all"
+          },
+          {
+            "name": "Google Play",
+            "icon": "Play",
+            "className": "inline-flex items-center space-x-2 px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-200 transition-all"
+          }
+        ],
+        "layout": "flex flex-col space-y-3"
+      }
+    },
+    "bottomBar": {
+      "containerClassName": "border-t border-gray-800 mt-8 pt-8 text-center",
+      "copyright": {
+        "text": "© 2024 TİBBNET. Bütün hüquqlar qorunur.",
+        "className": "text-gray-400 text-sm"
+      }
+    }
+  },
+  "animations": {
+    "fadeIn": {
+      "class": "animate-fade-in",
+      "duration": "0.6s",
+      "easing": "ease-out"
+    },
+    "slideUp": {
+      "class": "animate-slide-up",
+      "duration": "0.8s",
+      "easing": "ease-out"
+    },
+    "scaleIn": {
+      "class": "animate-scale-in",
+      "duration": "0.5s",
+      "easing": "ease-out"
+    },
+    "carousel": {
+      "class": "animate-scroll",
+      "duration": "30s",
+      "easing": "linear",
+      "iterationCount": "infinite"
+    }
+  },
+  "responsiveBreakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  },
+  "componentLibrary": {
+    "shadcnComponents": [
+      "Button",
+      "Card",
+      "CardContent",
+      "CardDescription",
+      "CardHeader",
+      "CardTitle",
+      "Accordion",
+      "AccordionContent",
+      "AccordionItem",
+      "AccordionTrigger",
+      "Badge",
+      "Tabs",
+      "TabsContent",
+      "TabsList",
+      "TabsTrigger",
+      "Sheet",
+      "SheetContent",
+      "SheetTrigger"
+    ],
+    "lucideIcons": [
+      "Phone",
+      "Mail",
+      "MessageCircle",
+      "Menu",
+      "X",
+      "ChevronDown",
+      "ChevronUp",
+      "ChevronLeft",
+      "ChevronRight",
+      "Check",
+      "Apple",
+      "Play",
+      "Monitor",
+      "FileText",
+      "Video",
+      "Shield",
+      "UserCircle",
+      "Calendar",
+      "Clock",
+      "Tag",
+      "Bell",
+      "BarChart",
+      "Search",
+      "Stethoscope",
+      "Heart",
+      "Globe",
+      "FileCheck",
+      "User",
+      "CalendarCheck",
+      "Clipboard",
+      "Chrome"
+    ]
+  },
+  "seoMetadata": {
+    "title": "TİBBNET - Peşəkar Həkimlərin Məkanı",
+    "description": "Tibbi Xidmətlərin asan, təhlükəsiz və sərfəli virtual məkanı. İnteraktiv virtual klinika, rəqəmsal klinik məlumatlar, əyani və onlayn xidmətlər.",
+    "keywords": "tibbnet, həkim, pasient, onlayn görüş, tibbi xidmət, Azərbaycan, virtual klinika",
+    "ogImage": "/og-image.jpg",
+    "canonicalUrl": "https://tibbnet.az"
+  },
+  "performanceOptimizations": {
+    "lazyLoadImages": true,
+    "prefetchLinks": true,
+    "minimizeReflows": true,
+    "useWebP": true,
+    "criticalCSS": true
+  },
+  "accessibilityFeatures": {
+    "ariaLabels": true,
+    "keyboardNavigation": true,
+    "focusIndicators": true,
+    "screenReaderSupport": true,
+    "colorContrast": "WCAG AA compliant",
+    "altTexts": "Required for all images"
+  },
+  "designPrinciples": {
+    "approach": "Modern, clean, and professional",
+    "userExperience": "Intuitive navigation with clear call-to-actions",
+    "visualHierarchy": "Clear content hierarchy with proper spacing",
+    "consistency": "Consistent use of colors, typography, and spacing throughout",
+    "responsiveness": "Mobile-first approach with seamless desktop experience",
+    "interactivity": "Smooth transitions and hover effects for better engagement",
+    "accessibility": "WCAG 2.1 AA compliant design"
+  },
+  "technicalStack": {
+    "framework": "Next.js 14+",
+    "styling": "Tailwind CSS 3.x",
+    "components": "shadcn/ui",
+    "icons": "lucide-react",
+    "animations": "Tailwind CSS animations + custom keyframes",
+    "fonts": "Inter (Google Fonts)",
+    "stateManagement": "React Hooks (useState, useEffect)",
+    "deployment": "Vercel (recommended)"
+  },
+  "customAnimations": {
+    "keyframes": {
+      "fadeIn": {
+        "0%": { "opacity": "0", "transform": "translateY(10px)" },
+        "100%": { "opacity": "1", "transform": "translateY(0)" }
+      },
+      "slideUp": {
+        "0%": { "opacity": "0", "transform": "translateY(20px)" },
+        "100%": { "opacity": "1", "transform": "translateY(0)" }
+      },
+      "scaleIn": {
+        "0%": { "opacity": "0", "transform": "scale(0.95)" },
+        "100%": { "opacity": "1", "transform": "scale(1)" }
+      },
+      "scroll": {
+        "0%": { "transform": "translateX(0)" },
+        "100%": { "transform": "translateX(-50%)" }
+      }
+    }
+  },
+  "interactionStates": {
+    "buttons": {
+      "default": "bg-[#4D8875] text-white",
+      "hover": "bg-[#3d6d5f] shadow-xl scale-105",
+      "active": "bg-[#2d5d4f] scale-100",
+      "disabled": "bg-gray-300 cursor-not-allowed opacity-50"
+    },
+    "links": {
+      "default": "text-gray-700",
+      "hover": "text-[#4D8875]",
+      "active": "text-[#3d6d5f]"
+    },
+    "cards": {
+      "default": "shadow-lg",
+      "hover": "shadow-xl transform -translate-y-1",
+      "active": "shadow-md"
+    }
+  },
+  "gridLayouts": {
+    "features": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+    "benefits": "grid-cols-1 md:grid-cols-3",
+    "twoColumn": "grid-cols-1 md:grid-cols-2",
+    "footer": "grid-cols-1 md:grid-cols-4"
+  },
+  "spacingSystem": {
+    "sections": "py-20",
+    "containers": "px-4 sm:px-6 lg:px-8",
+    "cardPadding": "p-6 md:p-8",
+    "buttonPadding": "px-6 py-3 md:px-8 md:py-4",
+    "gaps": {
+      "small": "gap-3",
+      "medium": "gap-6",
+      "large": "gap-12"
+    }
+  },
+  "contentGuidelines": {
+    "headings": "Keep concise and descriptive",
+    "paragraphs": "Maximum 3-4 lines for readability",
+    "buttons": "Use action-oriented text",
+    "images": "Use high-quality images with proper alt text",
+    "icons": "Use consistently sized icons (16px-24px)",
+    "whitespace": "Generous spacing for better readability"
+  },
+  "implementationNotes": {
+    "stateManagement": "Use React hooks for component state (menu toggle, accordion, carousel)",
+    "routing": "Implement smooth scroll for anchor links",
+    "imageOptimization": "Use Next.js Image component for automatic optimization",
+    "loadingStates": "Add loading skeletons for better UX",
+    "errorHandling": "Implement error boundaries for graceful failures",
+    "forms": "Add proper validation and error messages",
+    "analytics": "Integrate analytics tracking for user interactions"
+  },
+  "futureEnhancements": {
+    "suggested": [
+      "Dark mode toggle",
+      "Multi-language full implementation",
+      "Blog section for health articles",
+      "Patient testimonials carousel",
+      "Live chat integration",
+      "Newsletter subscription",
+      "Social media integration",
+      "Doctor profile pages",
+      "Appointment booking system integration"
+    ]
+  }
+}
