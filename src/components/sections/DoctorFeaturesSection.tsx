@@ -50,7 +50,10 @@ const DOCTOR_FEATURES = [
 
 export function DoctorFeaturesSection() {
   return (
-    <section id="hekim-features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="hekim-features"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4">
@@ -78,7 +81,9 @@ export function DoctorFeaturesSection() {
                     <h3 className="font-semibold text-gray-900">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+                    <p className="text-sm text-gray-600">
+                      {feature.description}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
